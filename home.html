@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            background-image: url(1.png);
+            background-color: black;
+        }
+
+        .container{ 
+            width: 33%;
+            height: 300px;
+            margin: auto;
+            position: relative;
+            top: 200px;
+            background: transparent;
+            
+        }
+        select{
+            border: 1px solid white;
+            border-radius: 2px;
+            width: 400px;
+            height: 40px;
+            background: lightseagreen;
+            font-size: 200%;
+            color: black;
+            
+        }
+
+        option{
+            width: 400px;
+            height: 20px;
+            background: lightseagreen;
+            color: black;
+
+        }
+
+        input{
+            width: 150px;
+            height: 45px;
+            font-size: 200%;
+            border: none;
+            background-color: lightgreen;
+
+            border: 2px solid white;
+            border-radius: 7px;
+            color: black;
+        }
+
+        input:hover{
+            background-color: greenyellow;
+            cursor: pointer;
+        }
+    </style>
+    <script>
+        function passvalues(){
+            
+            var a=document.getElementById("txt");
+            var desh=a.value;
+            console.log(desh)
+
+            if(desh=="Bangladesh"){
+                cap="Dhaka"
+            }
+            if(desh=="Japan"){
+                cap="Tokyo"
+            }
+            if(desh=="Pakistan"){
+                cap="Islamabad"
+            }
+            if(desh=="Germany"){
+                cap="Berlin"
+            }
+            if(desh=="Spain"){
+                cap="Madrid"
+            }
+            if(desh=="England"){
+                cap="London"
+            }
+            if(desh=="Brazil"){
+                cap="Brasília"
+            }
+            if(desh=="Argentina"){
+                cap="Buenos Aires"
+            }
+            if(desh=="Pero"){
+                cap="Lima"
+            }
+            if(desh=="Egypt"){
+                cap="Cairo"
+            }
+
+
+            localStorage.setItem("textvalue",cap);
+            return false;
+        }
+    </script>
+</head>
+<body>
+
+    <div class="container">
+        <form action="capital.html">
+
+            <select name="" id="txt">
+                <option value="Bangladesh">Bangladesh</option>
+                <option value="Japan">Japan</option>
+                <option value="Pakistan">Pakistan</option>
+                <option value="Germany" >Germany</option>
+                <option value="Spain" >Spain</option>
+                <option value="England" >England</option>
+                <option value="Brazil" >Brazil</option>
+                <option value="Argentina" >Argentina</option>
+                <option value="Egypt" >Egypt</option>
+                <option value="Pero" >Pero</option>
+            </select>
+            <input type="submit" value="Capital" onclick="passvalues()">
+        </form>
+
+    </div>
+
+    
+</body>
+</html>
